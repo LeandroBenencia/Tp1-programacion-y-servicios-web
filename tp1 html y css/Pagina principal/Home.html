@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina principal</title>
+    <link rel="stylesheet" href="/Pagina principal/Assets/css/home.css">
 </head>
+
+
 <body>
-    <h1>Bienvenido a la página principal</h1>
-    <p>Esta es la página de inicio de nuestro sitio web.</p>
+    
     <header>
+        <h1 class="titulo">Bienvenidos</h1>
+    <p>Esta es la página de inicio de nuestro sitio web.</p>
+    </header>
+  
+    
         <nav>
              <button>Menu</button>
             <ul>
@@ -16,6 +23,7 @@
                 <li><a href="Destinos.html">Destinos</a></li>
                 <li><a href="Agencias.html">Agencias</a></li>
                 <li><a href="Precios.html">Precios</a></li>
+                <li><a href="/Pagina principal/pages/BlogDestinos.html">Lugares mas visitados</a></li>
 
             </ul>
         </nav>
@@ -24,22 +32,32 @@
     <!--Video de lugares mas visitados (Seccion hero)-->
     <section class="lugares">
         <div><h1>Lugares mas visitados</h1></div>
-        <video src="paisajes.mp4" autoplay loop muted></video>
+        <video src="/Pagina principal/Assets/video/YTDown.com_Shorts_Cerro-de-los-7-colores-Purmamarca_Media_oXQhgATPeMg_002_720p.mp4" autoplay loop muted></video>
+    <div class="overlay">
+        <h1>El cerro de 7 colores es muy popular por lo que su nombre mismo indica :v ps no seas webon p gil eres por eso te cuerneanxd</h1>
+    </div>
     </section>
 
    <!--Destinos destacados-->
 <section class="Destinos">
-    <h1>Lugares preferidos de la gente</h1>
+
+    <h1 class="titulo-destinos">Lugares preferidos de la gente</h1>
     <div class="destino">
-        <img src="" alt="">
-        <h2>Salta</h2>
-        <p>Salta es una ciudad ubicada en el noroeste de Argentina, conocida por su arquitectura colonial, su rica historia y su vibrante cultura. La ciudad se encuentra rodeada de impresionantes paisajes naturales, como las montañas de los Andes y los valles fértiles. Salta es famosa por su centro histórico bien conservado, que incluye la Catedral de Salta, la Iglesia de San Francisco y la Plaza 9 de Julio. Además, la ciudad es un punto de partida ideal para explorar la región circundante, que ofrece una variedad de actividades al aire libre, como senderismo, paseos en bicicleta y visitas a pueblos tradicionales.</p>
+        <div class="imagen-contenedor">
+            <h2>Purmamarca</h2>
+            <img src="/Pagina principal/Assets/images/purmamarca.webp" alt="Purmamarca">
+        </div>
+        <p>Purmamarca es un pequeño pueblo ubicado en la provincia de Jujuy, en el noroeste de Argentina. Se encuentra a unos 2.300 metros sobre el nivel del mar, dentro de la Quebrada de Humahuaca, una región de gran valor histórico y cultural declarada Patrimonio de la Humanidad por la UNESCO en 2003.El principal atractivo de Purmamarca es el Cerro de los Siete Colores, una montaña que presenta distintos tonos (rojo, verde, amarillo, blanco, entre otros) producto de la acumulación de sedimentos durante millones de años. Este cerro se puede observar desde casi cualquier punto del pueblo, convirtiéndose en su símbolo.</p>
     </div>
+
     <div class="destino">
-        <img src="" alt="">
-        <h2>Jujuy</h2>
+        <div class="imagen-contenedor">
+            <h2>Las Salinas</h2>
+            <img src="/Pagina principal/Assets/images/las salinas.webp" alt="Las Salinas">
+        </div>
         <p>Jujuy es una provincia ubicada en el noroeste de Argentina, conocida por su impresionante belleza natural y su rica cultura. La provincia se caracteriza por sus paisajes variados, que incluyen montañas, valles, desiertos y selvas. Jujuy es famosa por sus formaciones geológicas únicas, como la Quebrada de Humahuaca, un valle estrecho con impresionantes formaciones rocosas y pueblos tradicionales. Además, Jujuy es hogar de una vibrante cultura indígena, con tradiciones ancestrales que se reflejan en su música, danza y festividades. La provincia también ofrece una variedad de actividades al aire libre, como senderismo, paseos en bicicleta y visitas a comunidades locales.</p>
     </div>
+
 </section>
 
     <!--Contador de visitas -->
@@ -53,7 +71,7 @@
     <!--Testimonios -->
     <section class="testimonios">
         <div class="testimonio">
-            <img src="/Pagina principal/Assets/Video/marca-agua-jujuy-al-momento-1-64png.webp" alt="">
+            <img src="/Pagina principal/Assets/images/marca-agua-jujuy-al-momento-1-64png.webp" alt="">
             <h2>Juan Perez</h2>
             <p>Me encantó este lugar, es increíblemente hermoso y la gente es muy amable pero el camino es largo qliao.</p>
         </div>
@@ -67,7 +85,7 @@
 
 <Footer>
     <p><li><a href="Suscribete">Suscribete</a></li></p>
-    <p><li><a href="Contacto de unju">Contacto</a></li></p>
+    <p><li><a href="/Pagina principal/pages/Contacto.html">Contacto</a></li></p>
     <p><li><a href="Donde ubicarnos">Donde ubicarnos</a></li></p>
     
 </Footer>
