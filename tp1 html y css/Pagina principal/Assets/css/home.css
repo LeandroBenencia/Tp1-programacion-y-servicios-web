@@ -1,0 +1,114 @@
+header  {
+    text-align: center;
+    color: #333;
+    text-shadow: #333 1px 1px 2px;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #61863f;
+
+}
+
+nav {
+    background-color: #61863f;
+    padding: 1px;
+    position: relative;
+    box-sizing: border-box;
+    max-width: 55px ;
+    padding-bottom: 90px;
+}
+
+nav ul {
+    background-color: none;
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 10px 0;
+    content: "-"
+    ;
+}
+
+nav:hover ul {
+    display: block;
+}
+section.lugares {
+    position: relative;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    width: 100% ;
+    height: 400px;
+    object-fit: cover;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    animation: aparecer 4s forwards;
+}
+ 
+@keyframes aparecer{
+    from {
+        opacity: 0;
+        transform: rotateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(30);
+    }
+} 
+
+video {
+    width: 100%;
+    height:90%;
+    object-fit: cover;
+    margin-top: -20px;
+}
+
+.titulo-destinos{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.destino {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.destino p {
+ font-size:21px;
+    padding: 60px;
+}
+.imagen-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.imagen-contenedor img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+}
