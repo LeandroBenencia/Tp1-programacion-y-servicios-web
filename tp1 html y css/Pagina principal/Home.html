@@ -1,166 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina principal</title>
     <link rel="stylesheet" href="/Pagina principal/Assets/css/home.css">
 </head>
-
-
 <body>
-    
-    <header>
+    <header role="banner">
         <h1 class="titulo">Bienvenidos</h1>
-    <p>Esta es la página de inicio de nuestro sitio web.</p>
-    <!-- Menu desplegable -->
-  <nav>
-             <button>Menu</button>
+        <p>Esta es la página de inicio de nuestro sitio web.</p>
+        <nav role="navigation" aria-label="Menú principal">
+            <div class="menu-contenedor">   
+                            <button aria-label="Abrir menú de navegación">Menu</button>
             <ul>
-               
-                <li><a href="/Pagina principal/pages/Destinos.html">Destinos</a></li>
-                <li><a href="/Pagina principal/pages/Agencias.html">Agencias</a></li>
-                <li><a href="/Pagina principal/pages/Precios.html">Precios</a></li>
-                <li><a href="/Pagina principal/pages/BlogDestinos.html">Lugares mas visitados</a></li>
-
+                <li><a href="/Pagina principal/pages/Destinos.html" aria-label="Ver destinos">Destinos</a></li>
+                <li><a href="/Pagina principal/pages/Agencias.html" aria-label="Ver agencias">Agencias</a></li>
+                <li><a href="/Pagina principal/pages/Precios.html" aria-label="Ver precios">Precios</a></li>
+                <li><a href="/Pagina principal/pages/BlogDestinos.html" aria-label="Ver lugares más visitados">Lugares mas visitados</a></li>
             </ul>
-        </nav>   
-</header>
-  
-    
-      
-<main>
-   
-    <!-- Video de lugares mas visitados (Seccion hero) -->
-    <section class="lugares">
-        <div><h1>Lugares mas visitados</h1></div>
-        <video src="/Pagina principal/Assets/video/YTDown.com_Shorts_Cerro-de-los-7-colores-Purmamarca_Media_oXQhgATPeMg_002_720p.mp4" autoplay loop muted></video>
-    <div class="overlay">
-        <h1>El Cerro de los Siete Colores es una formación montañosa famosa por sus distintos tonos naturales, originados por sedimentos minerales.</h1>
-    </div>
-    </section>
+            </div>
+        </nav>
+    </header>
 
-  <!--  Destinos destacados -->
-<section class="Cards">
+    <main role="main">
 
-    <h1 class="titulo-destinos">Lugares preferidos de la gente</h1>
-    
-    <div class="card">
-        <img src="/Pagina principal/Assets/images/purmamarca.webp" alt="Purmamarca">
-            <h2>Purmamarca</h2>
-        <p>Purmamarca es un pequeño pueblo ubicado en la provincia de Jujuy, en el noroeste de Argentina. Se encuentra a unos 2.300 metros sobre el nivel del mar</p>
-        <input type="checkbox" id="ver-mas"> 
-        <label for="ver-mas">Ver más</label>
-        <div class="contenido-adicional">
-            <p>Además del Cerro de los Siete Colores, Purmamarca ofrece otras atracciones como la Iglesia de Santa Rosa de Lima, construida en el siglo XVII, y el Paseo de los Colorados, un sendero que permite apreciar formaciones rocosas de colores similares a las del cerro. El pueblo también cuenta con una plaza principal rodeada de casas de adobe y tiendas de artesanías donde se pueden adquirir productos típicos de la región., dentro de la Quebrada de Humahuaca, una región de gran valor histórico y cultural declarada Patrimonio de la Humanidad por la UNESCO en 2003.El principal atractivo de Purmamarca es el Cerro de los Siete Colores, una montaña que presenta distintos tonos (rojo, verde, amarillo, blanco, entre otros) producto de la acumulación de sedimentos durante millones de años. Este cerro se puede observar desde casi cualquier punto del pueblo, convirtiéndose en su símbolo.</p>
-    </div>
-    </div>
+        <section class="lugares" aria-label="Sección hero con video">
+            <div><h1>Lugares mas visitados</h1></div>
+            <video src="/Pagina principal/Assets/video/YTDown.com_Shorts_Cerro-de-los-7-colores-Purmamarca_Media_oXQhgATPeMg_002_720p.mp4" autoplay loop muted aria-hidden="true"></video>
+            <div class="overlay">
+                <h1>El Cerro de los Siete Colores es una formación montañosa famosa por sus distintos tonos naturales, originados por sedimentos minerales.</h1>
+            </div>
+        </section>
 
-    <div class="card">
-    
-        <img src="/Pagina principal/Assets/images/las salinas.webp" alt="Las Salinas">
-            <h2>Las Salinas</h2>    
-               <p>Las Salinas son un conjunto de salares ubicados en la provincia de Jujuy, en el noroeste de Argentina. Son conocidas por su paisaje único y su belleza natural. El lugar es famoso por su coloración rojiza y su forma alargada, que se asemeja a un lago. Las Salinas son un destino turístico popular, especialmente durante la temporada de verano, cuando el clima es más agradable.</p>
-    
-        <input type="checkbox" id="ver-mas-salinas">
-        <label for="ver-mas-salinas">Ver más</label>
-        <div class="contenido-adicional">
-            <p> Las salinas se formaron hace millones de años a partir de la evaporación de antiguos lagos que quedaron atrapados en la región. Con el paso del tiempo, el agua se evaporó debido al clima seco, dejando grandes depósitos de sal en la superficie.El paisaje es completamente blanco y plano, con una superficie que en algunas zonas se presenta en forma de bloques o polígonos naturales, creados por la contracción de la sal. Durante la temporada de lluvias, una fina capa de agua cubre el salar, generando un efecto espejo que refleja el cielo, creando vistas únicas.</p>
-        </div>
+        <section class="Cards" aria-label="Destinos destacados">
+            <h1 class="titulo-destinos">Lugares preferidos de la gente</h1>
 
-    </div>
+            <div class="card">
+                <img src="/Pagina principal/Assets/images/purmamarca.webp" alt="Vista de Purmamarca">
+                <h2>Purmamarca</h2>
+                <p>Purmamarca es un pequeño pueblo ubicado en la provincia de Jujuy, en el noroeste de Argentina. Se encuentra a unos 2.300 metros sobre el nivel del mar</p>
+                <input type="checkbox" id="ver-mas">
+                <label for="ver-mas" aria-label="Ver más sobre Purmamarca">Ver más</label>
+                <div class="contenido-adicional">
+                    <p>Además del Cerro de los Siete Colores, Purmamarca ofrece otras atracciones como la Iglesia de Santa Rosa de Lima, construida en el siglo XVII, y el Paseo de los Colorados.</p>
+                </div>
+            </div>
 
-    <div class="card">
-    <img src="/Pagina principal/Assets/images/quebrada-de-humahuaca.webp" alt="Humahuaca">
-        <h2>Quebrada de Humahuaca</h2>
-        <p>La Quebrada de Humahuaca es una región natural y cultural ubicada en la provincia de Jujuy, en el noroeste de Argentina. Es conocida por su paisaje desértico y su valor histórico y cultural, declarada Patrimonio de la Humanidad por la UNESCO en 2003.</p>
-        <input type="checkbox" id="ver-mas-humahuaca">
-        <label for="ver-mas-humahuaca">Ver más</label>
-        <div class="contenido-adicional">
-            <p>Humahuaca es uno de los asentamientos más antiguos del norte argentino. Antes de la llegada de los españoles, la zona estaba habitada por pueblos originarios, especialmente los omaguacas. Durante la época colonial, la ciudad fue un punto clave en las rutas comerciales que conectaban el Alto Perú (actual Bolivia) con el resto del territorio.Además, tuvo un papel importante en las guerras por la independencia argentina, ya que fue escenario de enfrentamientos y paso de ejércitos patriotas.</p>
-        </div>
-    </div>
+            <div class="card">
+                <img src="/Pagina principal/Assets/images/las salinas.webp" alt="Vista de Las Salinas">
+                <h2>Las Salinas</h2>
+                <p>Las Salinas son un conjunto de salares ubicados en la provincia de Jujuy, en el noroeste de Argentina. Son conocidas por su paisaje único y su belleza natural.</p>
+                <input type="checkbox" id="ver-mas-salinas">
+                <label for="ver-mas-salinas" aria-label="Ver más sobre Las Salinas">Ver más</label>
+                <div class="contenido-adicional">
+                    <p>Las salinas se formaron hace millones de años a partir de la evaporación de antiguos lagos que quedaron atrapados en la región.</p>
+                </div>
+            </div>
 
-<div class="card">
-    <img src="/Pagina principal/Assets/images/Termas de reyes.webp"  alt="Termas de reyes">
-    <h2>Termas de Reyes</h2>
-    <p>Las Termas de Reyes son un conjunto de termas naturales ubicadas en la provincia de Jujuy, en el noroeste de Argentina. Son conocidas por su belleza natural y sus propiedades terapéuticas.</p>
-    <input type="checkbox" id="ver-mas-reyes">
-    <label for="ver-mas-reyes">Ver más</label>
-    <div class="contenido-adicional">
-        <p>Las termas se encuentran en un entorno natural protegido, rodeado de paisajes desérticos y formaciones geológicas únicas. La temperatura del agua varía entre 38 y 42 grados Celsius, lo que las hace ideales para el baño termal.</p>
-    </div>
-</div>
+            <div class="card">
+                <img src="/Pagina principal/Assets/images/quebrada-de-humahuaca.webp" alt="Vista de Quebrada de Humahuaca">
+                <h2>Quebrada de Humahuaca</h2>
+                <p>La Quebrada de Humahuaca es una región natural y cultural ubicada en la provincia de Jujuy, declarada Patrimonio de la Humanidad por la UNESCO en 2003.</p>
+                <input type="checkbox" id="ver-mas-humahuaca">
+                <label for="ver-mas-humahuaca" aria-label="Ver más sobre Quebrada de Humahuaca">Ver más</label>
+                <div class="contenido-adicional">
+                    <p>Humahuaca es uno de los asentamientos más antiguos del norte argentino, con un papel importante en las guerras por la independencia argentina.</p>
+                </div>
+            </div>
 
-</section>
+            <div class="card">
+                <img src="/Pagina principal/Assets/images/Termas de reyes.webp" alt="Vista de Termas de Reyes">
+                <h2>Termas de Reyes</h2>
+                <p>Las Termas de Reyes son un conjunto de termas naturales ubicadas en la provincia de Jujuy. Son conocidas por su belleza natural y sus propiedades terapéuticas.</p>
+                <input type="checkbox" id="ver-mas-reyes">
+                <label for="ver-mas-reyes" aria-label="Ver más sobre Termas de Reyes">Ver más</label>
+                <div class="contenido-adicional">
+                    <p>La temperatura del agua varía entre 38 y 42 grados Celsius, lo que las hace ideales para el baño termal.</p>
+                </div>
+            </div>
+        </section>
 
-    <!--Contador de visitas -->
-    <section class="contador">
-        <div class="visitas">
-            <h2 class="numero">200</h2>
-            <p>Turistas visitaron nuestros destinos</p>
-        </div>
-        <div class="visitas">
-            <h2 class="numero">120</h2>
-            <p>Recomendaciones de tabibitos</p>
-        </div>  
-        <div class="visitas">
-            <h2 class="numero">10</h2>
-            <p>Experiencis compartidas</p>
-        </div>
-      
-    </section>
-  
-    <!--Testimonios -->
-    <section class="testimonios">
-   
-    
-        <input type="radio" name="testimonio"  id="t1" class="punto" checked>
-        <input type="radio" name="testimonio"  id="t2" class="punto">
-        <input type="radio" name="testimonio"  id="t3" class="punto">
-  
-        
-    <div class="carrusel">
-        <div class="testimonio">
-            
-            <h2>Juan Perez</h2>
-            <h3>Lugar al que viajo: Termas de reyes</h3>
-            <p>Me encantó este lugar, es increíblemente hermoso y la gente es muy amable pero el camino es largo qliao.</p>
-            <img src="/Pagina principal/Assets/images/Termas de reyes.webp" alt="Termas de Reyes">
-        </div>
-        
-        <div class="testimonio">
-            <h2>Maria Gomez</h2>
-            <h3>Lugar al que viajo: Cerro de 7 colores</h3>
-            <p>Una experiencia inolvidable, definitivamente volveré a visitar este lugar.</p>     
-            <img src="/Pagina principal/Assets/images/cerro-de-los-siete-colores.webp" alt="Cerro de los Siete Colores">
-        </div>
-        
-        <div class="testimonio">
-            
-            <h2>Carlos Rodriguez</h2>
-            <h3>Lugar al que viajo: Las Salinas</h3>
-            <p>Las vistas son impresionantes, especialmente al atardecer. Recomiendo visitar</p>
-            <img src="/Pagina principal/Assets/images/las salinas.webp" alt="las salinas">
-        
-        </div>
-    </div>
-    
-</section>
+        <section class="contador" aria-label="Estadísticas">
+            <div class="visitas">
+                <h2 class="numero">200</h2>
+                <p>Turistas visitaron nuestros destinos</p>
+            </div>
+            <div class="visitas">
+                <h2 class="numero">120</h2>
+                <p>Recomendaciones de viajeros</p>
+            </div>
+            <div class="visitas">
+                <h2 class="numero">10</h2>
+                <p>Experiencias compartidas</p>
+            </div>
+        </section>
 
-</main>
+        <section class="testimonios" aria-label="Testimonios de viajeros">
+            <input type="radio" name="testimonio" id="t1" class="punto" checked aria-label="Testimonio 1">
+            <input type="radio" name="testimonio" id="t2" class="punto" aria-label="Testimonio 2">
+            <input type="radio" name="testimonio" id="t3" class="punto" aria-label="Testimonio 3">
 
-<!-- Pie de pagina -->
-<footer>
-    <ul>
-     
-        <li><a href="/Pagina principal/pages/Contacto.html">Contacto</a></li>
-        <li><a href="https://maps.app.goo.gl/j1ZGdCBHEbtTEC1y9">Donde ubicarnos</a></li>
-    </ul>
+            <div class="carrusel">
+                <div class="testimonio">
+                    <h2>Juan Perez</h2>
+                    <h3>Lugar al que viajo: Termas de reyes</h3>
+                    <p>Me encantó este lugar, es increíblemente hermoso y la gente es muy amable.</p>
+                    <img src="/Pagina principal/Assets/images/Termas de reyes.webp" alt="Termas de Reyes">
+                </div>
+                <div class="testimonio">
+                    <h2>Maria Gomez</h2>
+                    <h3>Lugar al que viajo: Cerro de 7 colores</h3>
+                    <p>Una experiencia inolvidable, definitivamente volveré a visitar este lugar.</p>
+                    <img src="/Pagina principal/Assets/images/cerro-de-los-siete-colores.webp" alt="Cerro de los Siete Colores">
+                </div>
+                <div class="testimonio">
+                    <h2>Carlos Rodriguez</h2>
+                    <h3>Lugar al que viajo: Las Salinas</h3>
+                    <p>Las vistas son impresionantes, especialmente al atardecer.</p>
+                    <img src="/Pagina principal/Assets/images/las salinas.webp" alt="Las Salinas">
+                </div>
+            </div>
+        </section>
 
-    <form id="newsletter">
-        <input type="email" placeholder="Ingresa tu correo" required>
-        <button type="submit">Suscribirse</button>
-    </form>
-</footer>
+        <button onclick="toggleDarkMode()" aria-label="Activar modo oscuro">Modo oscuro</button>
+    </main>
+
+    <footer role="contentinfo">
+        <ul>
+            <li><a href="/Pagina principal/pages/Contacto.html" aria-label="Ir a contacto">Contacto</a></li>
+            <li><a href="https://maps.app.goo.gl/j1ZGdCBHEbtTEC1y9" aria-label="Ver ubicación en mapa">Donde ubicarnos</a></li>
+        </ul>
+        <form id="newsletter" aria-label="Formulario de suscripción">
+            <input type="email" placeholder="Ingresa tu correo" required aria-label="Correo electrónico">
+            <button type="submit" aria-label="Suscribirse al newsletter">Suscribirse</button>
+        </form>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
 </body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,7 @@
 </head>
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a class="boton-inicio" href="/Pagina principal/Home.html">Inicio</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
+    <main role="main">
         <div class="titulo">
             <h1>Contactanos</h1>
             <p>Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos.</p>
@@ -24,32 +16,39 @@
 
         <input type="checkbox" id="cerrar-modal" style="display:none">
 
-        <form class="formulario" action="#" method="post">
-            <input type="email" placeholder="Correo electronico" required>
-            <input type="text" placeholder="Asunto" required>
-            <textarea placeholder="Escribe tu mensaje aquí" required></textarea>
-            <label for="cerrar-modal" class="button">Enviar</label>
-            <div class="spinner"></div>
-            <p class="mensaje">✔ Mensaje enviado</p>
+        <form class="formulario" action="#" method="post" aria-label="Formulario de contacto">
+            <input type="email" placeholder="Correo electronico" required aria-label="Correo electronico">
+            <input type="text" placeholder="Asunto" required aria-label="Asunto">
+            <textarea placeholder="Escribe tu mensaje aquí" required aria-label="Mensaje"></textarea>
+            <label for="cerrar-modal" class="button" aria-label="Enviar mensaje">Enviar</label>
+            <div class="spinner" aria-label="Cargando"></div>
+            <p class="mensaje" role="alert">✔ Mensaje enviado</p>
         </form>
 
-        <div class="modal">
+        <div class="modal" role="dialog" aria-label="Confirmación de envío">
             <div class="modal-contenido">
                 <h2>¡Mensaje enviado!</h2>
                 <p>Nos pondremos en contacto contigo pronto.</p>
-                <label for="cerrar-modal">Cerrar</label>
+                <label for="cerrar-modal" aria-label="Cerrar modal">Cerrar</label>
             </div>
         </div>
 
+        <button onclick="toggleDarkMode()" aria-label="Activar modo oscuro">Modo oscuro</button>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <ul>
-            <li><a href="#">Suscribete</a></li>
-            <li><a href="/Pagina principal/pages/Contacto.html">Contacto</a></li>
-            <li><a href="https://maps.app.goo.gl/j1ZGdCBHEbtTEC1y9">Donde ubicarnos</a></li>
+            <li><a class="boton-inicio" href="/Pagina principal/Home.html" aria-label="Volver al inicio">Inicio</a></li>
+            <li><a href="https://maps.app.goo.gl/j1ZGdCBHEbtTEC1y9" aria-label="Ver ubicación en el mapa">Donde ubicarnos</a></li>
+            
         </ul>
     </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
 
 </body>
 </html>
