@@ -1,74 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-    <meta charset="UTF-8">
-    <title>Precios</title>
-    <link rel="stylesheet" href="/Pagina principal/Assets/css/Precios.css">
-    <link rel="stylesheet" href="/Pagina principal/Assets/css/style.css">
-</head>
-<body>
-    <button onclick="document.body.classList.toggle('dark-mode')">
-        🌙 Modo oscuro
-    </button>
-    <main>
-        <h1>Comparar Precios</h1>
-        <table>
-        <thead>
-            <tr>
-             <th>Destino</th>
-             <th>Precio</th>
-             <th>Incluye</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                 <td>Purmamarca</td>
-                 <td>$50.000</td>
-                 <td>
-                   <span class="tooltip">
-                    Hotel + desayuno
-                        <span class="tooltip-text">
-                         Incluye acceso ilimitado
-                        </span>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                 <td>Termas de Reyes</td>
-                 <td>$40.000</td>
-                 <td>
-                   <span class="tooltip">
-                    Hotel + desayuno + Trecking
-                        <span class="tooltip-text">
-                         Incluye buffet libre
-                        </span>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-             <td>Parque Calilegua</td>
-                 <td>$30.000</td>
-                 <td>
-                   <span class="tooltip">
-                    Visitas guiadas al parque 
-                        <span class="tooltip-text">
-                         NO TE LO PIERDAS
-                        </span>
-                    </span>
-                </td>
-            </tr> 
-            <tr>
-                <td>Salinas Grandes</td>
-                <td>$60.000</td>
-                <td>
-                    <span class="tooltip">
-                        Incluye Transporte y Guia Turistico
-                        <span class="tooltip-text">
-                            VENI A CONOCER ESTE MAR DE SAL CON NOSOTROS
-                        </span>
-                    </span>
-                </td>
-            </tr>  
-        </tbody>
-        </table>
-    </main>
+        <meta charset="UTF-8">
+        <title>Precios</title>
+        <link rel="stylesheet" href="/Pagina principal/Assets/css/Precios.css">
+        <link rel="stylesheet" href="/Pagina principal/Assets/css/style.css">
+    </head>
+    <body>
+        <button onclick="document.body.classList.toggle('dark-mode')">
+            🌙 Modo oscuro
+        </button>
+        <a href="/Pagina principal/Home.html" class="btn-volver">⬅ Volver al inicio</a>
+        <main>
+            <h1>Comparar Precios</h1>
+            <p class="subtitulo">Todos los paquetes incluyen seguro de viaje. Consultá disponibilidad.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Destino</th>
+                        <th>Imagen</th>
+                        <th>Duración</th>
+                        <th>Precio</th>
+                        <th>Incluye</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="nombre-destino">Purmamarca</td>
+                        <td><img src="/Pagina principal/Assets/images/purmamarca.jpg" alt="Purmamarca"></td>
+                        <td>5 días</td>
+                        <td class="precio">$85.000</td>
+                        <td>
+                            <span class="tooltip">
+                                Hotel 3★ + desayuno + guía
+                                <span class="tooltip-text">Incluye traslados desde Jujuy capital, guía certificado y visita al Cerro de los 7 Colores</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nombre-destino">Termas de Reyes</td>
+                        <td><img src="/Pagina principal/Assets/images/termasdereyes.jpg" alt="Termas de Reyes"></td>
+                        <td>3 días</td>
+                        <td class="precio">$65.000</td>
+                        <td>
+                            <span class="tooltip">
+                                Hotel + acceso termas + trekking
+                                <span class="tooltip-text">Incluye acceso ilimitado a las termas, pensión completa y caminata guiada por los valles</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nombre-destino">Parque Calilegua</td>
+                        <td><img src="/Pagina principal/Assets/images/calilegua.jpg" alt="Parque Calilegua"></td>
+                        <td>3 días</td>
+                        <td class="precio">$55.000</td>
+                        <td>
+                            <span class="tooltip">
+                                Visitas guiadas + alojamiento
+                                <span class="tooltip-text">Incluye guía especializado en flora y fauna, alojamiento en cabaña y entrada al parque nacional</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nombre-destino">Salinas Grandes</td>
+                        <td><img src="/Pagina principal/Assets/images/salinasgrandes.jpg" alt="Salinas Grandes"></td>
+                        <td>2 días</td>
+                        <td class="precio">$48.000</td>
+                        <td>
+                            <span class="tooltip">
+                                Transporte + guía turístico
+                                <span class="tooltip-text">Incluye transporte 4x4, guía local, almuerzo típico y sesión de fotos en el salar</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nombre-destino">Quebrada de Humahuaca</td>
+                        <td><img src="/Pagina principal/Assets/images/quebrada-de-humahuaca.webp" alt="Quebrada de Humahuaca"></td>
+                        <td>4 días</td>
+                        <td class="precio">$78.000</td>
+                        <td>
+                            <span class="tooltip">
+                                Hotel + guía + visitas culturales
+                                <span class="tooltip-text">Incluye visita a Tilcara, Purmamarca y Humahuaca, guía histórico-cultural y alojamiento en hostería</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nombre-destino">Punta Corral</td>
+                        <td><img src="/Pagina principal/Assets/images/marca-agua-jujuy-al-momento-1-64png.webp" alt="Punta Corral"></td>
+                        <td>2 días</td>
+                        <td class="precio">$42.000</td>
+                        <td>
+                            <span class="tooltip">
+                                Transporte + guía + alojamiento
+                                <span class="tooltip-text">Incluye traslado en vehículo 4x4, guía de montaña certificado y alojamiento en refugio de altura</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nombre-destino">Quebrada de Lozano</td>
+                        <td><img src="/Pagina principal/Assets/images/lozano.jpg" alt="Quebrada de Lozano"></td>
+                        <td>1 día</td>
+                        <td class="precio">$22.000</td>
+                        <td>
+                            <span class="tooltip">
+                                Excursión + guía + almuerzo
+                                <span class="tooltip-text">Incluye transporte de ida y vuelta, guía local y almuerzo típico jujeño en el camino</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nombre-destino">San Antonio</td>
+                        <td><img src="/Pagina principal/Assets/images/san antonio.webp" alt="San Antonio"></td>
+                        <td>2 días</td>
+                        <td class="precio">$38.000</td>
+                        <td>
+                            <span class="tooltip">
+                                Alojamiento + desayuno + paseos
+                                <span class="tooltip-text">Incluye hospedaje en casa de campo, desayuno regional, cabalgata y visita a productores locales</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nombre-destino">Serranías del Hornocal</td>
+                        <td><img src="/Pagina principal/Assets/images/Hornacal.webp" alt="Hornocal"></td>
+                        <td>3 días</td>
+                        <td class="precio">$70.000</td>
+                        <td>
+                            <span class="tooltip">
+                                Transporte 4x4 + guía + hotel
+                                <span class="tooltip-text">Incluye traslado en camioneta 4x4, guía de montaña, hotel en Humahuaca y visita al mirador de 14 colores</span>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>

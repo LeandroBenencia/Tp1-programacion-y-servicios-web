@@ -1,23 +1,107 @@
-.agencias {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+:root {
+    --color-principal: #61863f;
+    --color-secundario: #fff;
+    --color-texto: #000;
+    --color-fondo: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
 }
 
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
 
+/* ── DARK MODE ── */
+body.dark-mode {
+    background-color: #111;
+    color: white;
+}
+
+body.dark-mode .card-front,
+body.dark-mode .card-back {
+    background-color: #1e1e1e;
+    color: white;
+    border-color: #61863f;
+}
+
+body.dark-mode .card-front p,
+body.dark-mode .card-front h3,
+body.dark-mode .card-back p {
+    color: white;
+}
+
+body.dark-mode a {
+    color: #90ee90;
+}
+
+/* ── FOCO ACCESIBLE ── */
+a:focus,
+input:focus,
+button:focus {
+    outline: 2px solid yellow;
+}
+
+/* ── BOTONES ── */
+button {
+    display: block;
+    margin: 15px auto 5px;
+    background: #61863f;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.btn-volver {
+    display: inline-block;
+    margin: 10px 20px;
+    background: #61863f;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.btn-volver:active {
+    transform: scale(0.95);
+}
+
+/* ── TÍTULO ── */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* ── GRID DE AGENCIAS ── */
+.agencias {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+/* ── TARJETA FLIP ── */
 .card-agencia {
-    width: 250px;
-    height: 200px;
+    width: 260px;
+    height: 320px;
     perspective: 1000px;
-    transition: transform 0.3s;
-}
-
-.card-agencia:hover {
-    transform: scale(1.05);
 }
 
 .card-inner {
@@ -32,22 +116,95 @@ body {
     transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
-    background: var(--color-secundario);
-    color: var(--color-principal);
+/* ── FRENTE Y REVERSO ── */
+.card-front,
+.card-back {
+    background: white;
+    color: #111;
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    border-radius: 12px;
+    border: 1px solid #61863f;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
     text-align: center;
-    border: 1px solid var(--color-principal);
 }
 
+/* ── IMAGEN EN EL FRENTE ── */
+.card-front img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-front-info {
+    width: 100%;
+    padding: 10px 12px;
+    background: white;
+    z-index: 1;
+}
+
+body.dark-mode .card-front-info {
+    background: #1e1e1e;
+}
+
+.card-front h3 {
+    font-size: 15px;
+    color: #61863f;
+    margin-bottom: 4px;
+}
+
+.card-front p {
+    font-size: 13px;
+    color: #555;
+}
+
+body.dark-mode .card-front p {
+    color: #ccc;
+}
+
+/* ── REVERSO ── */
 .card-back {
     transform: rotateY(180deg);
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+}
+
+.card-back p {
+    font-size: 14px;
+    color: #333;
+}
+
+body.dark-mode .card-back p {
+    color: #ddd;
+}
+
+.card-back::before {
+    content: "📋 Contacto";
+    font-size: 16px;
+    font-weight: bold;
+    color: #61863f;
+    margin-bottom: 8px;
+}
+
+/* ── RATING ESTRELLAS ── */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 4px;
 }
 
 .rating input {
@@ -55,11 +212,28 @@ body {
 }
 
 .rating label {
-    font-size: 20px;
-    color: var(--color-principal);
+    font-size: 26px;
+    color: #ccc;
     cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    margin: 0;
 }
 
+.rating label:hover,
+.rating label:hover ~ label,
 .rating input:checked ~ label {
     color: gold;
+    transform: scale(1.2);
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 768px) {
+    .card-agencia {
+        width: 90%;
+        height: 300px;
+    }
 }

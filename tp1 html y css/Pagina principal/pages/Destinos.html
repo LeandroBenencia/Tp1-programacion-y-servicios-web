@@ -5,77 +5,145 @@
         <title>Destinos</title>
         <link rel="stylesheet" href="/Pagina principal/Assets/css/Destinos.css">
         <link rel="stylesheet" href="/Pagina principal/Assets/css/style.css">
-        <button onclick="document.body.classList.toggle('dark-mode')">
-        🌙 Modo oscuro
-        </button>
     </head>
     <body>
+        <button onclick="document.body.classList.toggle('dark-mode')">
+            🌙 Modo oscuro
+        </button>
+        <a href="/Pagina principal/Home.html" class="btn-volver">⬅ Volver al inicio</a>
         <main>
             <h1>Destinos Turisticos</h1>
-                    <input type="radio" name="categoria" id="todos" checked>
-                    <label for="todos">Todos</label>
-                    <input type="radio" name="categoria" id="cultural">
-                    <label for="cultural">Cultural</label>
-                    <input type="radio" name="categoria" id="naturaleza">
-                    <label for="naturaleza">Naturaleza</label>
-                    <input type="radio" name="categoria" id="gastronomico">
-                    <label for="gastronomico">Gastronomico</label> 
-                 <section class="galeria">
-                 <article class="card cultural">
-                    <img src="/Pagina principal/Assets/images/purmamarca.jpg" alt="Purmamarca">
-                    <h3>Purmamarca</h3>
-                    <p>Cerro de los 7 Colores</p>
-                 </article>
-                 <article class="card cultural">
-                    <img src="/Pagina principal/Assets/images/termasdereyes.jpg" alt="Termas de Reyes">
-                    <h3>Termas De Reyes</h3>
-                    <p>Valles</p>
-                 </article>
-                 <article class="card naturaleza">
-                    <img src="/Pagina principal/Assets/images/calilegua.jpg" alt="Calilegua">
-                    <h3>Parque Calilegua</h3>
-                    <p>Naturaleza</p>
-                 </article>
-                 <article class="card cultural">
-                    <img src="/Pagina principal/Assets/images/salinasgrandes.jpg" alt="Salinas Grandes">
-                    <h3>Salinas Grandes</h3>
-                    <p>Sumergete en este inmenso mar de sal </p>
-                 </article>
-                 </section>
-                 <section>
+
+            <input type="radio" name="categoria" id="todos" checked>
+            <label for="todos">Todos</label>
+            <input type="radio" name="categoria" id="cerros">
+            <label for="cerros">Cerros</label>
+            <input type="radio" name="categoria" id="valles">
+            <label for="valles">Valles</label>
+            <input type="radio" name="categoria" id="quebrada">
+            <label for="quebrada">Quebrada</label>
+
+            <section class="galeria">
+                <a href="https://www.google.com/maps?q=Purmamarca+Jujuy" target="_blank">
+                    <article class="card cerros" data-categoria="cerros">
+                        <img src="/Pagina principal/Assets/images/purmamarca.jpg" alt="Purmamarca">
+                        <h3>Purmamarca</h3>
+                        <p>Cerro de los 7 Colores</p>
+                    </article>
+                </a>
+                <a href="https://www.google.com/maps?q=Termas+de+Reyes+Jujuy" target="_blank">
+                    <article class="card valles" data-categoria="valles">
+                        <img src="/Pagina principal/Assets/images/termasdereyes.jpg" alt="Termas de Reyes">
+                        <h3>Termas De Reyes</h3>
+                        <p>Valles</p>
+                    </article>
+                </a>
+                <a href="https://www.google.com/maps?q=Parque+Nacional+Calilegua">
+                    <article class="card valles" data-categoria="valles">
+                        <img src="/Pagina principal/Assets/images/calilegua.jpg" alt="Calilegua">
+                        <h3>Parque Calilegua</h3>
+                        <p>Conoce la flora y la fauna de la provincia de Jujuy</p>
+                    </article>
+                </a>
+                <a href="https://www.google.com/maps?q=Salinas+Grandes+Jujuy" target="_blank">
+                    <article class="card quebrada" data-categoria="quebrada">
+                        <img src="/Pagina principal/Assets/images/salinasgrandes.jpg" alt="Salinas Grandes">
+                        <h3>Salinas Grandes</h3>
+                        <p>Sumergete en este inmenso mar de sal</p>
+                    </article>
+                </a>
+                <a href="https://www.google.com/maps?q=Quebrada+de+Humahuaca" target="_blank">
+                    <article class="card quebrada" data-categoria="quebrada">
+                        <img src="/Pagina principal/Assets/images/quebrada-de-humahuaca.webp" alt="Quebrada de Humahuaca">
+                        <h3>Quebrada de Humahuaca</h3>
+                        <p>Paisaje Patrimonio de la Humanidad</p>
+                    </article>
+                </a>
+                <a href="https://www.google.com/maps?q=Punta+Corral+Jujuy" target="_blank">
+                    <article class="card cerros" data-categoria="cerros">
+                        <img src="/Pagina principal/Assets/images/marca-agua-jujuy-al-momento-1-64png.webp" alt="Punta Corral">
+                        <h3>Punta Corral</h3>
+                        <p>Famoso por su peregrinación</p>
+                    </article>
+                </a>
+                <a href="https://www.google.com/maps?q=Quebrada+de+Lozano" target="_blank">
+                    <article class="card quebrada" data-categoria="quebrada">
+                        <img src="/Pagina principal/Assets/images/lozano.jpg" alt="Quebrada de Lozano">
+                        <h3>Quebrada de Lozano</h3>
+                        <p>Entrada natural a los valles</p>
+                    </article>
+                </a>
+                <a href="https://www.google.com/maps?q=San+Antonio+Jujuy" target="_blank">
+                    <article class="card valles" data-categoria="valles">
+                        <img src="/Pagina principal/Assets/images/san antonio.webp" alt="San Antonio">
+                        <h3>San Antonio</h3>
+                        <p>Tranquilidad en los valles</p>
+                    </article>
+                </a>
+                <a href="https://www.google.com/maps?q=Hornocal+Jujuy" target="_blank">
+                    <article class="card cerros" data-categoria="cerros">
+                        <img src="/Pagina principal/Assets/images/Hornacal.webp" alt="Hornocal">
+                        <h3>Serranías del Hornocal</h3>
+                        <p>Montaña de 14 colores</p>
+                    </article>
+                </a>
+            </section>
+
+            <section>
                 <h2>Precios de Destinos</h2>
                 <table>
                     <thead>
                         <tr>
-                        <th>Destino</th>
-                        <th>Precios</th>
-                        <th>Dias</th>
+                            <th>Destino</th>
+                            <th>Precio</th>
+                            <th>Días</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Purmamarca</td>
-                            <td>$50.000</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>Terma de Reyes</td>
-                            <td>$40.000</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Parque Calilegua</td>
-                            <td>$30.000</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>Salinas Grandes</td>
-                            <td>$60.000</td>
-                            <td>1 </td>
-                        </tr>
+                    <tbody id="tabla-precios">
+                        <!-- Las filas se generan con JS según el filtro -->
                     </tbody>
                 </table>
             </section>
         </main>
+
+        <script>
+            // Datos de todos los destinos con su categoría
+            const destinos = [
+                { nombre: "Purmamarca",             precio: "$85.000", dias: 5, categoria: "cerros"   },
+                { nombre: "Termas de Reyes",         precio: "$65.000", dias: 3, categoria: "valles"   },
+                { nombre: "Parque Calilegua",        precio: "$55.000", dias: 3, categoria: "valles"   },
+                { nombre: "Salinas Grandes",         precio: "$48.000", dias: 2, categoria: "quebrada" },
+                { nombre: "Quebrada de Humahuaca",   precio: "$78.000", dias: 4, categoria: "quebrada" },
+                { nombre: "Punta Corral",            precio: "$42.000", dias: 2, categoria: "cerros"   },
+                { nombre: "Quebrada de Lozano",      precio: "$22.000", dias: 1, categoria: "quebrada" },
+                { nombre: "San Antonio",             precio: "$38.000", dias: 2, categoria: "valles"   },
+                { nombre: "Serranías del Hornocal",  precio: "$70.000", dias: 3, categoria: "cerros"   },
+            ];
+
+            function actualizarTabla(categoriaSeleccionada) {
+                const tbody = document.getElementById("tabla-precios");
+                const filtrados = categoriaSeleccionada === "todos"
+                    ? destinos
+                    : destinos.filter(d => d.categoria === categoriaSeleccionada);
+
+                tbody.innerHTML = filtrados.map(d => `
+                    <tr>
+                        <td>${d.nombre}</td>
+                        <td>${d.precio}</td>
+                        <td>${d.dias}</td>
+                    </tr>
+                `).join("");
+            }
+
+            // Escuchar cambios en los radio buttons
+            document.querySelectorAll('input[name="categoria"]').forEach(radio => {
+                radio.addEventListener("change", () => {
+                    actualizarTabla(radio.id);
+                });
+            });
+
+            // Cargar tabla al inicio con "todos"
+            actualizarTabla("todos");
+        </script>
     </body>
 </html>

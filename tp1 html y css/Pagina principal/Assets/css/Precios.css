@@ -1,41 +1,252 @@
+:root {
+    --color-principal: #61863f;
+    --color-secundario: #fff;
+    --color-texto: #000;
+    --color-fondo: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* ── DARK MODE ── */
+body.dark-mode {
+    background-color: #111;
+    color: white;
+}
+
+body.dark-mode table {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode th {
+    background-color: #3a5c25;
+}
+
+body.dark-mode td {
+    color: white;
+    border-color: #444;
+}
+
+body.dark-mode tbody tr:hover td {
+    background-color: #2a3f1a;
+    color: white;
+}
+
+body.dark-mode .subtitulo {
+    color: #aaa;
+}
+
+body.dark-mode a {
+    color: #90ee90;
+}
+
+/* ── FOCO ACCESIBLE ── */
+a:focus,
+button:focus {
+    outline: 2px solid yellow;
+}
+
+/* ── BOTONES ── */
+button {
+    display: block;
+    margin: 15px auto 5px;
+    background: #61863f;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.btn-volver {
+    display: inline-block;
+    margin: 10px 20px;
+    background: #61863f;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.btn-volver:active {
+    transform: scale(0.95);
+}
+
+/* ── TÍTULO ── */
+h1 {
+    text-align: center;
+    margin: 20px 0 8px;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* ── TABLA ── */
+main {
+    padding: 10px 30px 40px;
+}
+
 table {
-    background: var(--color-secundario);
-    color: var(--color-principal);
     width: 100%;
     border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-th, td {
-    border: 1px solid var(--color-principal);
-    padding: 10px;
+thead {
+    background-color: #61863f;
+    color: white;
+}
+
+th {
+    padding: 14px 12px;
     text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }
 
-tr:hover {
-    background-color: rgba(0,0,0,0.1);
+td {
+    padding: 10px 12px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #222;
+    transition: background 0.2s;
 }
 
+/* Imagen dentro de la tabla */
+td img {
+    width: 80px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Nombre del destino en negrita */
+.nombre-destino {
+    font-weight: bold;
+    color: #61863f;
+}
+
+body.dark-mode .nombre-destino {
+    color: #90ee90;
+}
+
+/* Precio destacado */
+.precio {
+    font-weight: bold;
+    font-size: 15px;
+    color: #2d5a1b;
+}
+
+body.dark-mode .precio {
+    color: #a8d878;
+}
+
+/* Filas alternadas */
+tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+body.dark-mode tbody tr:nth-child(even) td {
+    background-color: #252525;
+}
+
+/* Hover en fila completa */
+tbody tr:hover td {
+    background-color: #e8f5e1;
+    color: #111;
+}
+
+/* ── TOOLTIPS ── */
 .tooltip {
     position: relative;
     cursor: pointer;
+    border-bottom: 1px dashed #61863f;
+    display: inline-block;
 }
 
 .tooltip-text {
     position: absolute;
-    background: var(--color-principal);
-    color: var(--color-secundario);
-    padding: 5px;
-    border-radius: 5px;
-
-    bottom: 125%;
+    background: #61863f;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.4;
+    white-space: nowrap;
+    bottom: 130%;
     left: 50%;
     transform: translateX(-50%);
-
     opacity: 0;
-    transition: 0.3s;
-    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* Flechita del tooltip */
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #61863f;
 }
 
 .tooltip:hover .tooltip-text {
     opacity: 1;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 768px) {
+    main {
+        padding: 10px 10px 30px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px 6px;
+    }
+
+    td img {
+        width: 55px;
+        height: 38px;
+    }
+
+    .tooltip-text {
+        white-space: normal;
+        width: 160px;
+    }
 }

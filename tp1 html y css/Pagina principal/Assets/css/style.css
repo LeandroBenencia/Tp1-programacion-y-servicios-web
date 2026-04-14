@@ -56,3 +56,18 @@ button {
     background: #333;
     color: white;
 }
+
+.btn-volver {
+    display: inline-block;
+    margin: 10px;
+    padding: 8px 15px;
+    background: var(--color-principal);
+    color: var(--color-secundario);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-volver:hover {
+    opacity: 0.8;
+}
