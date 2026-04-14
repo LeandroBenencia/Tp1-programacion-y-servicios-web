@@ -140,7 +140,7 @@ video {
 .card {
     transition: transform 0.3s ease;
     background-color: rgb(58, 124, 68);
-    bborder-radius: 10px;
+    border-radius: 10px;
     padding: 15px;
     overflow: hidden;
     box-shadow: #0b0c0a 0px 5px 5px;
