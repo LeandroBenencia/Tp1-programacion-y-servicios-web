@@ -1,0 +1,58 @@
+:root {
+    --color-principal: #000;
+    --color-secundario: #fff;
+    --color-acento:#007bff;
+}
+
+body {
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+
+}
+
+h1 {
+    color: var(--color-principal);
+}
+
+.card:hover {
+    border-color: var(--color-acento);
+}
+
+.dark-mode {
+    --color-principal: #fff;
+    --color-secundario: #121212;
+}
+
+button, label {
+    transition: 0.3s;
+}
+
+label:hover {
+    background-color: #ddd;
+}
+
+@keyframes aparecer {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+    
+}
+
+.card {
+    animation: aparecer 1s ease;
+}
+
+input:focus, label:focus {
+    outline: 2px solid blue;
+}
+
+button {
+    padding: 8px 12px;
+    cursor:pointer;
+    border: none;
+    background: #333;
+    color: white;
+}
